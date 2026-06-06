@@ -86,7 +86,7 @@ In real-world deployments, clusters are typically created on **cloud platforms**
   - The cloud provider handles the control plane, networking, and scaling.
   - You focus on deploying and managing workloads.
   - Easily integrate with other cloud services (e.g., storage, logging, monitoring).
-
+## 
 #### **Why Minikube Is Not Used in Production**
 - **Minikube** is a lightweight tool meant for local development and testing only.
 - In production, you need a robust setup with scalability, monitoring, and high availability — something **Minikube cannot provide**.

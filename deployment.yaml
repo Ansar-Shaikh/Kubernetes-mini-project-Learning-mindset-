@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubernetes-test-app
+  name: kubernetes-app-test
 spec:
   replicas: 2  # Number of pods
   selector:
     matchLabels:
-      app: kubernetes-test-app
+      app: kubernetes-app-test
   template:
     metadata:
       labels:
-        app: kubernetes-test-app
+        app: kubernetes-app-test
     spec:
       containers:
-      - name: kubernetes-test-app
-        image: kubernetes-test-app:latest
+      - name: kubernetes-app-test
+        image: kubernetes-app-test:latest
         imagePullPolicy: Never  # Tell Kubernetes not to pull from a registry
         # image: vikash95/kubernetes-test-app:latest
         resources:
@@ -27,10 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: kubernetes-test-app
+  name: kubernetes-app-test
 spec:
   selector:
-    app: kubernetes-test-app
+    app: kubernetes-app-test
   ports:
   - port: 8080
     targetPort: 5000
